@@ -4,7 +4,7 @@ Get-ChildItem -Path $PSScriptRoot\Public -Filter '*.ps1' -Recurse | ForEach-Obje
         . $_.FullName
     }
     catch {
-        Write-Error -Message "Failed to import function $($import.fullname): $_"
+        Write-Error -Message "Failed to import function $($_.fullname): $_"
     }
 }
 
@@ -14,7 +14,7 @@ Get-ChildItem -Path $PSScriptRoot\Private -Filter '*.ps1' -Recurse | ForEach-Obj
         . $_.FullName
     }
     catch {
-        Write-Error -Message "Failed to import function $($import.fullname): $_"
+        Write-Error -Message "Failed to import function $($_.fullname): $_"
     }
 }
 
